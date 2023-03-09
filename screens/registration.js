@@ -15,6 +15,7 @@ export default class Registration extends React.Component {
             email: '',
             password: '',
             confirmPassword: '',
+            address:'',
         };
     }
 
@@ -57,7 +58,11 @@ export default class Registration extends React.Component {
         } else if (!/^\d+$/.test(contactNumber)) {
             Alert.alert('Error', 'Invalid Contact Number!')
         } else {
-            AsyncStorage.multiSet([['name', name], ['contactNumber', contactNumber], ['email', email], ['password', password]])
+            AsyncStorage.multiSet([['name', name], 
+                                ['contactNumber', contactNumber], 
+                                ['email', email], 
+                                ['password', password],
+                                ['address', address]])
             this.props.navigation.push('Login')
         }
     }

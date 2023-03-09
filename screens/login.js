@@ -51,7 +51,7 @@ export default class Login extends React.Component {
                 routes: [{ name: 'Profile' }]
             })
         } else {
-            Alert.alert('Error', 'Invalid email and/or password!')
+            Alert.alert('Error', 'Unregistered email or invalid password!')
         }
     }
 
@@ -61,7 +61,7 @@ export default class Login extends React.Component {
                 <SafeAreaView>
                     <TextInput
                         onChangeText={input => this.emailHandler(input)}
-                        placeholder='Email'
+                        placeholder='Email*'
 
                         style={{
                             borderWidth: 3,
@@ -72,7 +72,7 @@ export default class Login extends React.Component {
                     />
                     <TextInput
                         onChangeText={input => this.passwordHandler(input)}
-                        placeholder='Password'
+                        placeholder='Password*'
                         secureTextEntry={true}
                         style={{
                             borderWidth: 3,

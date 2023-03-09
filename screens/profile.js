@@ -89,13 +89,18 @@ export default class Profile extends React.Component {
 
     render() {
         return (
-            <ImageBackground source={backgroundImage} style={{flex:1}}>
+            <ImageBackground source={backgroundImage} style={{ flex: 1 }}>
                 <SafeAreaView>
 
                     <ScrollView>
 
                         <View style={styles.picture}>
-                            <Avatar.Text size={120} label={this.state.name.charAt(0)} color={'black'} style={{ backgroundColor: 'yellow' }} />
+                            <Avatar.Text size={120}
+                                label={this.state.name.charAt(0)}
+                                color={'black'}
+                                style={{ backgroundColor: 'palegreen',
+                                        borderWidth: 2
+                                        }} />
                         </View>
 
                         {/* <Text style={styles.firstInputField}>{this.state.name}</Text> */}
@@ -144,7 +149,7 @@ export default class Profile extends React.Component {
                                 this.editableHandler(this.state.editable)
                             }}
                             style={styles.button}>
-                            <Text style={{fontSize:20, color:'black'}}> {this.state.change} </Text>
+                            <Text style={{ fontSize: 20, color: 'black' }}> {this.state.change} </Text>
                         </TouchableOpacity>
                     </ScrollView>
 
@@ -171,12 +176,13 @@ const styles = StyleSheet.create({
         height: 50,
         width: 200,
         textAlign: 'center',
+        textAlignVertical: 'center',
         marginTop: 20,
         marginBottom: 'auto',
         marginLeft: 'auto',
         marginRight: 'auto',
         borderRadius: 10,
-        borderWidth: 3,
+        borderWidth: 2,
         position: 'relative'
     },
     button: {
@@ -189,6 +195,7 @@ const styles = StyleSheet.create({
         width: 200,
         borderRadius: 10,
         marginTop: 20,
+        borderWidth: 2,
 
     },
     dropdown: {
@@ -197,7 +204,7 @@ const styles = StyleSheet.create({
         width: 200,
         backgroundColor: 'transparent',
         borderRadius: 10,
-        borderWidth: 3,
+        borderWidth: 2,
         paddingHorizontal: 8,
         marginLeft: 'auto',
         marginRight: 'auto',
@@ -207,6 +214,7 @@ const styles = StyleSheet.create({
         height: 20,
     },
     selectedTextStyle: {
+        fontSize: 20,
         color: 'black',
         textAlign: 'center',
     },
