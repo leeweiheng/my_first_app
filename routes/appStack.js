@@ -43,7 +43,8 @@ export default function AppStackNavigator() {
                         title: 'Profile',
                         headerTitleAlign: 'center',
                         headerTitleStyle: globalStyles.titleText,
-                        //headerTransparent: true,
+                        headerTransparent: true,
+                        //headerBackground: 'black'
                     }}
                 />
             </appStack.Navigator>
