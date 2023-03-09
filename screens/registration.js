@@ -55,14 +55,14 @@ export default class Registration extends React.Component {
             Alert.alert('Error', 'Invalid email!');
         } else if (password != confirmPassword) {
             Alert.alert('Error', 'Wrong Confirm Password!')
-        } else if (!/^\d+$/.test(contactNumber)) {
+        } else if (!/^\d+$/.test(contactNumber) && contactNumber != '') {
             Alert.alert('Error', 'Invalid Contact Number!')
         } else {
             AsyncStorage.multiSet([['name', name], 
                                 ['contactNumber', contactNumber], 
                                 ['email', email], 
                                 ['password', password],
-                                ['address', address]])
+                                ['address', this.state.address]])
             this.props.navigation.push('Login')
         }
     }
